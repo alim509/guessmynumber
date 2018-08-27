@@ -7,20 +7,25 @@ class Main {
         int MIN = 1;
         int MAX = 10;
         int comp = random.nextInt(MAX - MIN + 1) + MIN;
-        status = "equal";
+        String status = "equal";
         int guesses = 0;
 
-        System.out.print("Think of a number between 1 and 10");
+        System.out.print("Think of a number between 1 and 10.  ");
         comp = random.nextInt(MAX - MIN + 1) + MIN;
         System.out.print("Is the number equal, higher, or lower than " + comp + "?: ");
-        status = input.nextInt();
+        
+        status = input.toString();
+        
+
+        
         do {
-          if (status = higher);
-            MIN = comp;
-          else if (status = lower);
+            if (status == "higher") {
             MAX = comp;
-          else;
+          } else if (status == "lower") {
+            MIN = comp;
+          } else {
             System.out.print("You guessed it!");
-        } while (status != equal);
+          }
+        } while (status == "equal");
     }
 }
